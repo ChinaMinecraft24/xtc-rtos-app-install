@@ -1,0 +1,24 @@
+name = "xc-store-api"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+# 生产部署：wrangler deploy
+# 本地开发：wrangler dev（R2/KV 本地自动用 miniflare 模拟）
+
+[vars]
+MANIFEST_SECRET = "dev-secret-change-me"
+
+[[r2_buckets]]
+binding = "RPKS"
+bucket_name = "xc-rpk-store"
+preview_bucket_name = "xc-rpk-store-preview"
+
+# 审计 KV（可选；未绑定不影响主链路，manifest 接口会静默跳过）
+[[kv_namespaces]]
+binding = "AUDIT"
+id = "00000000000000000000000000000000"
+preview_id = "00000000000000000000000000000000"
+
+# 应用元数据（生产建议改从 KV/D1 读取，此处便于本地直跑）
+[dev]
+vars = { MANIFEST_SECRET = "dev-secret-change-me" }

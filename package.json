@@ -1,0 +1,14 @@
+{
+  "name": "xc-store-api",
+  "version": "1.0.0",
+  "description": "小天才应用商店 · CloudFlare Worker（清单/签名下载/探测）",
+  "type": "module",
+  "scripts": {
+    "test": "node test-all.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

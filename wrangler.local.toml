@@ -1,0 +1,18 @@
+# 本地开发用（wrangler dev 自动读取 .dev.vars / 此处变量）
+# 灰度配置：通过 env.GATE 注入，线上同理
+# 生产部署前请将 enabled 设为 false，逐型号开启
+
+[vars]
+MANIFEST_SECRET = "dev-secret-change-me"
+GATE = '''{"enabled":true,"rolloutPercent":100,"allowedAppIds":["com.example.calculator"],"models":[],"minEngineVersion":"","requiredCapabilities":["request.download","request.onDownloadComplete","file.writeArrayBuffer"]}'''
+
+[[r2_buckets]]
+binding = "RPKS"
+bucket_name = "xc-rpk-store"
+preview_bucket_name = "xc-rpk-store-preview"
+
+# KV 审计（可选，未创建时接口静默跳过）
+# 创建：wrangler kv:namespace create AUDIT
+# [[kv_namespaces]]
+# binding = "AUDIT"
+# id = "your-audit-namespace-id"

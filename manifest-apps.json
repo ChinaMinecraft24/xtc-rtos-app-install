@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "appId": "com.example.calculator",
+      "packageName": "com.example.calculator",
+      "displayVersion": "1.2.0",
+      "versionCode": 120,
+      "minStoreVersion": 100,
+      "minPlatformVersion": "1.0.0",
+      "models": ["Z6A", "Z6S", "Z6 Pro", "D3S"],
+      "title": "计算器",
+      "summary": "适配 240×240 的极简计算器",
+      "icon": { "key": "apps/com.example.calculator/120/icon.png", "size": 8421, "sha256": "" },
+      "rpk": { "key": "apps/com.example.calculator/120/rpk", "size": 245760, "sha256": "<由 upload.js 回填>", "etag": "" },
+      "permissions": ["0"],
+      "install": { "strategy": "unsupported", "reason": "runtime_install_unconfirmed", "fallback": "official_store_deeplink" },
+      "publishedAt": 1760000000
+    }
+  ]
+}
