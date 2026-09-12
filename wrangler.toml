@@ -5,7 +5,7 @@ compatibility_date = "2026-09-12"
 # KV：替代 R2，存 manifest + rpk + 图标 + 元数据
 [[kv_namespaces]]
 binding = "STORE"
-id = "在这里填新建STORE命名空间的真实id"
+id = "c60e2e07b40b4c73a392a4d21a9ce919"
 preview_id = "可选，preview命名空间id"
 
 # 审计日志 KV
