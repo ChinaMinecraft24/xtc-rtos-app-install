@@ -16,8 +16,8 @@ preview_bucket_name = "xc-rpk-store-preview"
 # 审计 KV（可选；未绑定不影响主链路，manifest 接口会静默跳过）
 [[kv_namespaces]]
 binding = "AUDIT"
-id = "00000000000000000000000000000000"
-preview_id = "00000000000000000000000000000000"
+id = "708ce2c0cdd7454cb1c1c1a78169d43b"
+preview_id = "43ee37418b1847dfa25aef606695a764"
 
 # 应用元数据（生产建议改从 KV/D1 读取，此处便于本地直跑）
 [dev]
